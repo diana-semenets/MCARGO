@@ -538,3 +538,43 @@ ul {
 .active-menu {
     color: #ffae1f;
 }
+.animat-subtitle, .animat-title{
+    opacity: 0;
+    transform: translateX(100px);
+}
+.about.move .animat-subtitle {
+    animation: title 0.5s forwards;
+}
+.about.move .animat-title {
+    animation: title 0.5s forwards 0.3s;
+}
+.specialization.move .specialization__subtitle, .service.move .service__subtitle{
+    animation: specialization 0.5s forwards;
+}
+.specialization.move .specialization__title, .service.move .service__title{
+    animation: specialization 0.5s forwards 0.3s;
+}
+.specialization__title, .specialization__subtitle, .service__subtitle,  .service__title{
+    opacity: 0;
+    transform: translateX(-100px);
+}
+@keyframes title {
+    0% {
+      transform: translateX(100px);
+      opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes specialization {
+    0% {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+      opacity: 1;
+    }
+  }
