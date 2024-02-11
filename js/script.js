@@ -50,60 +50,82 @@ let menu = document.querySelector(".menu");
         breakpoints: {
               320: {
                 slidesPerView: 4,
-                spaceBetween:20,
+                spaceBetween:15,
             },
               460: {
                 slidesPerView: 4,
-                spaceBetween:20,
+                spaceBetween:15,
             },
             500: {
-                slidesPerView: 5,
-                spaceBetween: 20,
+                slidesPerView: 4,
+                spaceBetween: 15,
                 
             },
             768: {
+                slidesPerView: 5,
+                spaceBetween: 15,
+            },
+            998: {
                 slidesPerView: 6,
                 spaceBetween: 20,
             },
-            998: {
-                slidesPerView: 7,
-                spaceBetween: 20,
-            },
-           
+            1100: {
+              slidesPerView: 7,
+              spaceBetween: 20,
+          },
         },
         
       
       });
 
 
-      window.onscroll = function () {
-        myFunction();
-      };
-      
-      const header = document.querySelector("header");
-      const sticky = header.offsetTop;
-      
-      function myFunction() {
-        if (window.pageYOffset > sticky) {
-          header.classList.add("sticky");
-        } else {
-          header.classList.remove("sticky");
+//----------скрол-------------------//
+
+window.onscroll = function() {myFunction()};
+
+const header = document.querySelector("header");
+const sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+
+window.addEventListener('scroll', () => {
+    let scrollDistance = window.scrollY;
+
+    document.querySelectorAll('section').forEach((el, i) => {
+        if (el.offsetTop - document.querySelector('nav').clientHeight <= scrollDistance) {
+            document.querySelectorAll('nav a').forEach((el) => {
+                if (el.classList.contains('active-menu')) {
+                    el.classList.remove('active-menu')
+                } 
+            });
+            document.querySelectorAll('nav li')[i].querySelector('a').classList.add('active-menu');
         }
+    })
+});
+
+function onEntry(entry) {
+    entry.forEach(change => {
+      if (change.isIntersecting) {
+       change.target.classList.add('move');
       }
-
-
-
-      window.addEventListener('scroll', () => {
-        let scrollDistance = window.scrollY;
-    
-        document.querySelectorAll('section').forEach((el, i) => {
-            if (el.offsetTop - document.querySelector('nav').clientHeight <= scrollDistance) {
-                document.querySelectorAll('nav a').forEach((el) => {
-                    if (el.classList.contains('active-menu')) {
-                        el.classList.remove('active-menu')
-                    } 
-                });
-                document.querySelectorAll('nav li')[i].querySelector('a').classList.add('active-menu');
-            }
-        })
     });
+  }
+  
+  let options = {
+    threshold: [0.5] };
+  let observer = new IntersectionObserver(onEntry, options);
+  let elements = document.querySelectorAll('section');
+  
+  for (let elm of elements) {
+    observer.observe(elm);
+  }
+
+
+
+ 
