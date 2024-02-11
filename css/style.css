@@ -796,4 +796,74 @@ ul {
     .banner__content {
         max-width: 620px;
     }
+    .about__content {
+        margin-top: 0;
+    }
+    .service__items {
+        gap: 15px;
+    }
+}
+@media (max-width: 840px) {
+    .menu-btn {
+        left: 100%;
+    }
+    .specialization__item-title {
+        font-size: 22px;
+        font-weight: 500;
+    }
+}
+@media (max-width: 770px) {
+    .about__text, .about__titles-list {
+        font-size: 18px;
+    }
+    .banner-title {
+        font-size: 36px;
+    }
+    .banner__content {
+        max-width: 580px;
+    }
+    .about__item-title {
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 25px;
+    }
+    .service__container {
+        margin-top: 50px;
+    }
+    .service__items {
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 30px;
+    }
+}
+@media (max-width: 690px) {
+    .about__container {
+        flex-wrap: wrap;
+    }
+    .about__images {
+        margin: 0 auto;
+    }
+    .about__container {
+        margin: 50px auto 0;
+    }
+    .about__images-car {
+        bottom: -30px;
+    }
+    .about__titles {
+        margin: 70px auto 0;
+    }
+    .specialization__items {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .brands {
+        margin-top: 50px;
+    }
+    .swiper-brands {
+        margin-top: 30px;
+    }
+    .contacts__titles {
+        margin: 30px auto 0;
+    }
+    .footer__list {
+        max-width: 200px;
+    }
 }
