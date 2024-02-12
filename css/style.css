@@ -965,4 +965,24 @@ ul {
     .about__images-car, .about__images-plane {
         padding: 10px;
     }
+    .service__item-img {
+        height: inherit;
+        grid-area: service__item-img;
+        margin-right: 10px;
+    }
+    .service__item-text {
+        grid-area: service__item-text;
+    }
+    .service__item {
+        display: grid;
+        grid-template-areas: 
+            "service__item-img service__item-title service__item-title"
+            "service__item-text service__item-text service__item-text";
+    }
+    .service__items{
+    grid-template-columns: 1fr
+  }
+  .about__titles{
+    margin: 50px auto 0;
+  }
 }
