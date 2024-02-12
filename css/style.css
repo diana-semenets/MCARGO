@@ -765,7 +765,7 @@ main {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background-color: #fff;
+      background-color: #ffae1f;
       transition: all 0.5s;
       color: #fff;
     }
@@ -807,12 +807,12 @@ main {
     }
     .menu-btn.active span:nth-of-type(2) {
       top: 50%;
-      background-color: #fff;
+      background-color: #ffae1f;
       transform: translate(-50%, 0%) rotate(45deg);
     }
     .menu-btn.active span:nth-of-type(3) {
       top: 50%;
-      background-color: #fff;
+      background-color: #ffae1f;
       transform: translate(-50%, 0%) rotate(-45deg);
     }
     .menu__list {
@@ -1029,6 +1029,49 @@ main {
     .banner-slide img{
         margin-top: 0;
     }
+    .contacts__lists-link {
+        font-size: 16px;
+    }
+    .contacts__lists-email, .contacts__list-email {
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .contacts__container    {
+        padding: 30px 20px;
+    }
+    .contacts__container::before {
+        content: '';
+        background-image: linear-gradient(91.85deg, #3e3c3feb 42.059%,rgba(67, 68, 72, 0.72) 51.487%);
+    }
+    .brands__titles.about__titles {
+        margin: 50px auto 0;
+    }
+    .service__item-img {
+        height: inherit;
+        grid-area: service__item-img;
+        margin-right: 15px;
+    }
+    .service__item-text {
+        grid-area: service__item-text;
+    }
+    .service__item {
+        display: grid;
+        grid-template-areas: 
+            "service__item-img service__item-title service__item-title service__item-title"
+            "service__item-text service__item-text service__item-text service__item-text";
+    }
+    .service__item.about__item {
+        max-width: 380px;
+    }
+    .about__item-title {
+        align-self: center;
+    }
+    .about__item-text {
+        margin-top: 10px;
+    }
+    .service__items{
+    grid-template-columns: 1fr
+  }
     
 }
 @media (max-width: 400px) {
@@ -1038,24 +1081,24 @@ main {
     .about__images-car, .about__images-plane {
         padding: 10px;
     }
-    .service__item-img {
-        height: inherit;
-        grid-area: service__item-img;
-        margin-right: 10px;
-    }
-    .service__item-text {
-        grid-area: service__item-text;
-    }
-    .service__item {
-        display: grid;
-        grid-template-areas: 
-            "service__item-img service__item-title service__item-title"
-            "service__item-text service__item-text service__item-text";
-    }
-    .service__items{
-    grid-template-columns: 1fr
-  }
+    
   .about__titles{
     margin: 50px auto 0;
   }
+  
+  .banner__content{
+    left: 40px;
+    max-width: 300px;
+  }
+}
+@media (max-width: 370px) {
+    .contacts__lists{
+        gap: 15px;
+    }
+    .contacts__container{
+        padding: 30px 15px;
+    }
+    .footer__contacts{
+        margin-top: 0;
+      }
 }
