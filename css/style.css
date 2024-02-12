@@ -229,7 +229,7 @@ main {
     max-width: 700px;
     position: absolute;
     top: 50%;
-    left: 15rem;
+    left: 20rem;
     transform: translate(0, -50%);
     color: #fff;
     font-family: "Geometria";
@@ -337,7 +337,6 @@ main {
 }
 .brands {
     margin-top: 80px;
-    padding-bottom: 50px;
 }
 .about__titles {
     max-width: 600px;
@@ -441,6 +440,9 @@ main {
     max-width: 74px;
     height: 100%;
 }
+.contacts {
+    padding-top: 50px;
+}
 .contacts__container {
     background-image: url('../img/bg-contacts.png');
     background-size: cover;
@@ -483,8 +485,8 @@ main {
 }
 .contacts__lists-email {
     margin-top: 25px;
-    font-weight: 600;
-    font-size: 20px;
+    
+    font-size: 18px;
 }
 .contacts__list-email {
     margin-bottom: 20px;
