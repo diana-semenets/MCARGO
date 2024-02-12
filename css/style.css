@@ -252,7 +252,7 @@ main {
 }
 
 .about__container {
-    max-width: 1372px;
+    max-width: 1220px;
     margin: 100px auto 0;
     display: flex;
     gap: 50px;
@@ -275,11 +275,12 @@ main {
     font-size: 20px;
 }
 .about__images {
+    max-width: 690px;
     height: 100%;
     position: relative;
 }
 .about__items {
-    max-width: 980px;
+    max-width: 1220px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -633,6 +634,7 @@ main {
     }
 }
 .about__images img {
+    max-width: 690px;
     transition: all 0.2s ease-in-out;
 }
 .about__images img:hover {
