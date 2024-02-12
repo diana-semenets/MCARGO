@@ -649,6 +649,17 @@ main {
     color: #ffae1f;
 }
 
+@media (max-width: 1750px) {
+    .banner__content {
+        left: 16rem;
+    }
+}
+@media (max-width: 1600px) {
+    .banner__content {
+        left: 12rem;
+    }
+}
+
 @media (max-width: 1400px) {
     .about {
         padding: 0 10px;
