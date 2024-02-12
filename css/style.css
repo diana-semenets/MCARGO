@@ -702,6 +702,7 @@ ul {
     .header-burger {
       display: flex;
       position: absolute;
+      right: 50px;
     }
     .item-menu__logo span {
       color: #1E1E1E;
@@ -745,7 +746,7 @@ ul {
       position: fixed;
       padding-top: 20px;
       top: 80px;
-      left: 0;
+      right: 0;
       width: 100%;
       height: 100%;
       background: #1d2a35;
@@ -768,8 +769,7 @@ ul {
       border-bottom: 1px solid #3a3939;
     }
     .menu-btn.active {
-        top: 65px;
-        left: 200%;
+   
     }
     .menu-btn.active span:nth-of-type(1) {
       display: none;
@@ -918,7 +918,7 @@ ul {
         flex-wrap: wrap;
     }
     .footer__contacts {
-        margin-top: -50px;
+        margin-top: -60px;
     }
 }
 @media (max-width: 500px) {
@@ -940,5 +940,29 @@ ul {
     }
     .contacts__titles.about__titles {
         margin: 20px auto 0;
+    }
+    .service__item-img img {
+        max-width: 54px;
+        height: auto;
+    }
+}
+@media (max-width: 450px) {
+    .specialization__items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .banner__content {
+        left: 50px;
+        max-width: 360px;
+    }
+    .about__images-car, .about__images-plane {
+        max-width: 190px;
+    }
+}
+@media (max-width: 400px) {
+    .about__images-car, .about__images-plane {
+        max-width: 160px;
+    }
+    .about__images-car, .about__images-plane {
+        padding: 10px;
     }
 }
