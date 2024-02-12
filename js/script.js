@@ -49,11 +49,11 @@ let menu = document.querySelector(".menu");
         },
         breakpoints: {
               320: {
-                slidesPerView: 4,
+                slidesPerView:3,
                 spaceBetween:15,
             },
               460: {
-                slidesPerView: 4,
+                slidesPerView: 3,
                 spaceBetween:15,
             },
             500: {
@@ -107,7 +107,7 @@ window.addEventListener('scroll', () => {
             document.querySelectorAll('nav li')[i].querySelector('a').classList.add('active-menu');
         }
     })
-});
+}); 
 
 function onEntry(entry) {
     entry.forEach(change => {
