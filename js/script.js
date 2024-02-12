@@ -36,7 +36,7 @@ let menu = document.querySelector(".menu");
         slidesPerView: 7,
         speed:800,
         loop: true,
-        spaceBetween: 100,
+        spaceBetween: 150,
         observer: true,
         autoHeight: false,
         autoplay: {
@@ -49,24 +49,24 @@ let menu = document.querySelector(".menu");
         },
         breakpoints: {
               320: {
-                slidesPerView:3,
+                slidesPerView:2,
                 spaceBetween:15,
             },
               460: {
-                slidesPerView: 3,
+                slidesPerView: 2,
                 spaceBetween:15,
             },
             500: {
-                slidesPerView: 4,
+                slidesPerView: 3,
                 spaceBetween: 15,
                 
             },
             768: {
-                slidesPerView: 5,
+                slidesPerView: 4,
                 spaceBetween: 15,
             },
             998: {
-                slidesPerView: 6,
+                slidesPerView: 5,
                 spaceBetween: 20,
             },
             1100: {
@@ -80,7 +80,7 @@ let menu = document.querySelector(".menu");
 
 
 //----------скрол-------------------//
-
+/*
 window.onscroll = function() {myFunction()};
 
 const header = document.querySelector("header");
@@ -92,7 +92,7 @@ function myFunction() {
   } else {
     header.classList.remove("sticky");
   }
-}
+}  */
 
 window.addEventListener('scroll', () => {
     let scrollDistance = window.scrollY;
