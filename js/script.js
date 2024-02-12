@@ -3,7 +3,8 @@ let menu = document.querySelector(".menu");
     menuBtn.addEventListener("click", (function() {
         menuBtn.classList.toggle("active");
         menu.classList.toggle("active");
-        if (menuBtn.classList.contains("active")) document.body.style.overflow = "hidden"; else document.body.style.overflow = "";
+        if (menuBtn.classList.contains("active")) document.body.style.overflow = "hidden"; 
+        else document.body.style.overflow = "";
     }));
     menu.addEventListener("click", (e => {
         if (e.target === menu) {
@@ -12,6 +13,27 @@ let menu = document.querySelector(".menu");
             document.body.style.overflow = "";
         }
     }));
+
+    document.addEventListener('keydown', (e) => {
+      if (e.code === 'Escape' && menu.classList.contains('active')) {
+          menu.classList.remove("active");
+          menuBtn.classList.remove("active");
+          document.body.style.overflow = "";
+      }
+  });
+ 
+  document.addEventListener("click", function (e) {
+      const target = e.target;
+      const its_menu = target == menu || menu.contains(target);
+      const its_btnMenu = target == menuBtn;
+      const menu_is_active = menu.classList.contains("active");
+  
+      if (!its_menu && !its_btnMenu && menu_is_active) {
+          menu.classList.remove("active");
+          menuBtn.classList.remove("active");
+          document.body.style.overflow = "";
+      }
+  });
 
     //-----------------
 
@@ -25,7 +47,7 @@ let menu = document.querySelector(".menu");
         effect: "fade",
         loop: true,
         autoplay: {
-            delay: 4000,
+            delay: 3000,
           },
     });
 
@@ -73,26 +95,13 @@ let menu = document.querySelector(".menu");
               slidesPerView: 7,
               spaceBetween: 20,
           },
-        },
-        
+        },       
       
       });
 
 
 //----------скрол-------------------//
-/*
-window.onscroll = function() {myFunction()};
 
-const header = document.querySelector("header");
-const sticky = header.offsetTop;
-
-function myFunction() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
-  } else {
-    header.classList.remove("sticky");
-  }
-}  */
 
 window.addEventListener('scroll', () => {
     let scrollDistance = window.scrollY;
