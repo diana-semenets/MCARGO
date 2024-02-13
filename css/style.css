@@ -523,9 +523,8 @@ main {
     width: 100%;
 }
 .footer__list {
-    max-width: 550px;
+    max-width: 100px;
     width: 100%;
-    display: flex;
     color: #fff;
     justify-content: space-between;
     align-items: center;
@@ -538,6 +537,9 @@ main {
     display: block;
     color: #fff;
     font-size: 18px;
+}
+.footer__partners li+li {
+    margin-top: 10px;
 }
 .footer__contacts-link {
     margin-top: 8px;
@@ -647,6 +649,17 @@ main {
 }
 .contacts__lists-site:hover {
     color: #ffae1f;
+}
+.footer__partners img {
+    max-width: 100px;
+}
+.footer__partners li a {
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+}
+.footer__list li+li {
+    margin-top: 10px;
 }
 
 @media (max-width: 1750px) {
@@ -1029,7 +1042,7 @@ main {
         grid-template-columns: repeat(2, 1fr);
     }
     .banner__content {
-        left: 50px;
+        left: 30px;
         max-width: 360px;
     }
     .about__images-car, .about__images-plane {
