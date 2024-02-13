@@ -35,6 +35,7 @@ let menu = document.querySelector(".menu");
       }
   });
 
+
     //-----------------
 
     const swiper = new Swiper(".mySwiper", {
